@@ -9,9 +9,9 @@ z = input("enter third number")
 #Q4.
 print("Let's started on screen")
 #Q5.
-s="AcadView"
-course="Pyhton"
-fee=5000
+s = "AcadView"
+course = "Pyhton"
+fee = 5000
 print('%s''%s%d'%(s,course,fee))
 #Q6.
 name="Tony Stark"
