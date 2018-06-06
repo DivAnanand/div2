@@ -1,0 +1,22 @@
+#Q1.
+print("my first python program is successful")
+#Q2.
+print("Acad"+"View")
+#Q3.
+x = input("enter the first number")
+y = input("enter the second number")
+z = input("enter third number")
+#Q4.
+print("Let's started on screen")
+#Q5.
+s="AcadView"
+course="Pyhton"
+fee=5000
+print('%s''%s%d'%(s,course,fee))
+#Q6.
+name="Tony Stark"
+salary=100000
+print('%s%d'%(name,salary))
+
+
+
