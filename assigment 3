@@ -14,8 +14,8 @@ course = "Pyhton"
 fee = 5000
 print('%s''%s%d'%(s,course,fee))
 #Q6.
-name="Tony Stark"
-salary=100000
+name = "Tony Stark"
+salary = 100000
 print('%s%d'%(name,salary))
 
 
