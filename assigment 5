@@ -1,0 +1,93 @@
+#Q1.
+print("Q1")
+our_list = []
+first_num = int(input("enter the  first number"))
+second_num = int(input("enter the  second number"))
+third_num = int(input("enter the thirs number"))
+our_list.append(first_num)
+our_list.append(second_num)
+our_list.append(third_num)
+print(our_list)
+print("------------")
+
+#Q2.
+print("Q2")
+our_list.append("google")
+our_list.append("apple")
+our_list.append("facebook")
+our_list.append("microsoft")
+our_list.append("tesla")
+print(our_list)
+print("--------------")
+
+#Q3.
+print("Q3")
+our_list1=[2,3,4,5,2,2]
+print(our_list1)
+print(our_list1.count(2))
+print("------------")
+
+#Q4.
+print("Q4")
+earth_metals = ["Beryillium","Calcium","Magnesium","Radium","Strontium","Barium"]
+earth_metals.sort()
+print(earth_metals)
+print("---------------------")
+
+#Q5.
+print("Q5")
+list_A = ["Tony Stark","Captian America","Thor","Loki","Black Panther"]
+list_A.sort()
+list_B = ["Earth","Jupiter","Mercury","Venus","Neptune","Uranus"]
+list_B.sort()
+print(list_A)
+print(list_B)
+list_C=sorted(list_A+list_B)
+print(list_C)
+print("--------------")
+
+#Q6.
+print("Q6")
+stack = ["Amar", "Akbar", "Anathony"]
+stack.append("Ram")
+stack.append("Iqbal")
+print(stack)
+print(stack.pop())
+print(stack)
+print(stack.pop())
+print(stack)
+print("------------------")
+from collections import deque
+queue = deque(["Amar","Akbar","Anthony"])
+queue.append("Ram")
+print(queue)
+queue.append("Arjit Singh")
+print(queue)
+print(queue.popleft())
+print(queue.popleft())
+print(queue)
+
+
+#Q7.
+print("Q7")
+even_number =[]
+odd_number= []
+for number in range(1,10)
+ if number % 2 == 0:
+     even_numbers.append(number)
+else:
+    odd_number.append(number)
+print("even number",even_number)
+print("odd number", odd_number)
+
+
+
+            
+        
+
+
+
+
+
+
+
