@@ -1,0 +1,56 @@
+#Q1. Tuples
+print("Q1")
+x = tuple()
+x = (2,"div",3.45,[3,"Ram"],3.4)
+print(len(x))
+print("---------------")
+#Q2.
+print("Q2")
+p = tuple()
+p = (3,4,5,6,7)
+print(max(p))
+print(min(p))
+print("---------------")
+#Q3.
+print("Q3")
+tuple1=(1,2,3,4,5)
+print(tuple1[0]*tuple1[1]*tuple1[2]*tuple1[3]*tuple1[4])
+print("----------------")
+#Q4. Sets
+print("Q4")
+odds = set([1,3,5,7,9])
+even = set([2,4,6,8,10])
+primes = set([2,3,5,7])
+composite = set([4,6,8,9,10])
+print(odds.difference(primes))
+print(odds & primes)
+print(odds.intersection(primes))
+print("-----------------------")
+
+#Q5.
+print("Q5")
+dict ={}
+for i in range(10):
+    
+    key = input("enter the name")
+    value = int(input("enter the marks"))
+    dict[key] = value
+print("---------------------")
+#Q6.
+print("Q6")
+import operator
+sort = sorted(dict.items(), key = operator.itemgetter(1))
+print("--------------")      
+print("Q7")
+import pprint                            
+message="MISSISSIPPI"
+count ={}
+for character in message:
+            count.setdefault(character,0)
+            count[character] = count[character]+1
+            print(pprint.pprint(count))
+            
+    
+ 
+
+
