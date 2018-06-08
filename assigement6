@@ -23,7 +23,9 @@ even = set([2,4,6,8,10])
 primes = set([2,3,5,7])
 composite = set([4,6,8,9,10])
 print(odds.difference(primes))
-print(odds & primes)
+def cmp(odds, primes):
+            return (odds > primes) - (odds < primes)
+ print(cmp(odds,primes))
 print(odds.intersection(primes))
 print("-----------------------")
 
