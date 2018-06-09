@@ -1,0 +1,70 @@
+#Q1.
+print("Q1")
+year = int(input("enter the year"))
+if (year%4==0 and year%100!=0 or year%400==0):
+    print("it is leap year")
+else:
+    print("print it not a leap year")
+print("-------------------")
+#Q2.
+print("Q2")
+length = input("enter the length")
+breadth = input("enter the breadth")
+if  length!= breadth:
+    print("it is rectangle")
+else:
+    print("it is a square")
+print("----------------")
+#Q3.
+print("Q3")
+age_1 = input("enter the age")
+age_2 = input("enter the second age")
+age_3 = input("enter the third age")
+if age_1>age_2:
+                 if age_1>age_3:
+                    print("Person 1 is oldest")
+                 else:
+                    print("Person 3 is oldest")
+if age_2>age_1:
+                 if age_2>age_3:
+                    print("person  2 is oldest")
+                 else:
+                    print("person 3 is oldest")
+if age_1<age_2:
+                if age_1<age_3:
+                     print("Person 1 is youngest")
+                else:
+                    print("person 3 is youngest")
+if age_2<age_1:
+                if age_2<age_3:
+                    print("person 2 is youngest")
+                else:
+                    print("person 3 is youngest")    
+                print("--------------------------------")
+#Q4.
+print("Q4")
+points = int(input("enter the point"))
+if points >1 and  points <= 50:
+    print("there is no prize")
+elif points > 50 and points <= 150:
+    print("Congratulation you have  won a wooden dog")
+elif points > 151 and points <= 180:
+    print("Congratulation you have won a Book")
+elif points > 181 and points >= 200:
+    print("Congratulation you hav won  Chocolates")
+print("------------------------------")
+#Q5.
+print("Q5")
+quantity = int(input("enter the quantity of items buyes:"))
+cost = quantity * 100
+if quantity > 1000:
+    discount = 0.1 * cost
+    cost = cost -discount
+    print("Cost after discount  is :"+ str(cost))
+else:
+    print("No discount! Cost is :"+ str(cost))
+
+
+
+
+
