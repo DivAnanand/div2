@@ -1,0 +1,69 @@
+#Q1
+print("Q1")
+i=1
+while i<11:
+    print(i)
+    i+=1
+print("----------")
+#Q2.
+print("Q2")
+while(True):
+    print("Infinte loop")
+print("-----------------")
+#Q3.
+print("Q3")
+num = int(input("enter an integer"))
+print("the double of num",2*num)
+print("-----------------------")
+#Q4.
+print("Q4")
+list_1=[1,2,3,"String",3.4,4.5, 5.6,"Div"]
+myIntList = [x  for x in list_1 if isinstance(x, int)]
+myStrList=  [x for  x in list_1 if isinstance(x, str)]
+myFloatList= [x for x in list_1 if isinstance(x, float)]
+print(myIntList)
+print(myStrList)
+print(myFloatList)
+print("----------------")
+
+
+
+#Q5.
+print("Q5")
+even_number = []
+odd_number =[]
+for x in range(1,101):
+    if x % 2 ==0:
+        even_number.append(x)
+else:
+    odd_number.append(x)
+print("even number",even_number)
+print("odd number",odd_number)
+print("-----------------")
+
+#Q6.
+print("Q6")
+i=1
+while i<=4:
+    print("*"*i)
+    i=i+1
+    print("-----------")
+#Q7.
+print("Q7.")
+dictionary ={}
+for x in range(3):
+    new_key  = input("enter the key")
+    new_age  = input("enter the age")
+    dictionary[new_key] = new_age
+    print(dictionary)
+print("--------------------")
+#Q8.
+print("Q8")
+list_2=[int(x) for x in input().split()]
+for i in list_2:
+    quest = int(input("enter the number"))
+    if quest==i:
+        list_2.remove(i)
+print(list_2)
+    
+
