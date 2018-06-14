@@ -1,0 +1,56 @@
+#Q1
+print("Q1")
+import time
+a= time.ctime()
+print("time.ctime() ")
+print("Example :"+a+"\n")
+b = time.strptime(a)
+print("time.striftime(string) return a tuple")
+print("Example:"+str(b))
+print("---------------")
+#Q2.
+print("Q2")
+import time
+time.asctime(time.localtime())
+print(time.asctime()) 
+print("-------------")
+#Q3.
+print("Q3")
+from time import strftime
+print(strftime("%m"))
+print("---------------------")
+#Q4.
+print("Q4")
+from time import strftime
+print(strftime("%d"))
+print("------------------")
+#Q5.
+print("Q5")
+import datetime
+a = datetime.datetime.now()strftime("%Y-%m-%d %H:%M:%S")
+b = list(a)
+print("Extracted date is :"+ b[8]+ b[9])
+print("----------------------")
+#Q6.
+print("Q6")
+import time
+print(time.localtime())
+print("-----------")
+#Q7.
+print("Q7")
+import math
+number= int(input("enter the number"))
+print(math.factorial(number))
+print("------------")
+#Q8.
+print("Q8")
+import math
+num = int(input("enter the number"))
+num1= int(input("enter the number"))
+print(math.gcd(num, num1))
+print("---------------")
+#Q9.
+print("Q9")
+import os
+print("\n Current Working Directory is:"+os.getcwd())
+print("\n User Enivronment is:"+os.environ["div"])
