@@ -53,4 +53,4 @@ print("---------------")
 print("Q9")
 import os
 print("\n Current Working Directory is:"+os.getcwd())
-
+print("\n User Environment is :"+os.environ['Home'])
