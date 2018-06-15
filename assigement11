@@ -1,0 +1,95 @@
+#Q1.
+print("Q1")
+class Circle():
+    
+    def __init__(self,radius):
+        self.radius=radius
+        
+    def getArea(self):
+        print(3.14*self.radius*self.radius)
+        
+    def getCircumference(self):
+        print(self.radius*2*3.14)
+        
+A = Circle(10)
+A.getArea()
+A.getCircumference()
+print("--------------------")
+#Q2.
+print("Q2")
+class Student():
+    
+    def __init__(self,name,rollno):
+        self.name = name
+        self.rollno = rollno
+        
+    def display(self):
+        print(self.name)
+        print(self.rollno)
+        
+C = Student(input("Enter the Student:"),input("enter the rollno"))
+C.display()  
+print("----------------------")
+#Q3
+print("Q3")
+class Temperature():
+    
+    def convertFahrenhiet(self,celsius):
+        print((celsius*(9/5))+32)
+        
+    def convertCelsius(self,fahrenhiet):
+        print((fahrenhiet-32)*(5/9))
+        
+F= Temperature()
+F.convertFahrenhiet(int(input("enter the temperature in celsius")))
+F.convertCelsius(int(input("enter the temperature in fahrenheit")))
+print("----------------")
+#Q4
+print("Q4")
+class MovieDetails():
+    
+    def __init__(self, Moviename , artistname , Yearofrelease , rating):
+        self.Moviename = Moviename
+        self.artistname = artistname
+        self.Yearofrelease = Yearofrelease
+        self.rating = rating
+        
+    def Display(self):
+       print(self.Moviename)
+       print(self.artistname)
+       print(self.Yearofrelease)
+       print(self.rating)
+       
+    def Update(self):
+        self.Moviename = input("enter the movie")
+        self.artistname = input("enter the artist")
+        self.Yearofrelease = input("enter the yearof release")
+        self.rating = int(input("enter the rating"))
+B = MovieDetails("Iron Man","Robert Downey",2008,8.2)
+B.Display()
+B.Update()
+B.Display()
+print("--------------------")
+#Q5.
+print("Q5")
+class Expenditure():
+    def __init__(self,expenditure,saving):
+        self.expenditure = expenditure
+        self.saving = saving
+                          
+    def display(self):
+        print(self.expenditure)
+        print(self.saving)
+                          
+    def Calculate(self):
+        Expenditure.totalsalary = self.expenditure + self.saving
+                          
+    def Display_Salary(self):
+        print("Total salary is ", self.totalsalary)
+                          
+P= Expenditure(input("enter the expenditure"),input("enter the saving"))
+P.display()
+P.Calculate()
+P.Display_Salary()
+            
+      
