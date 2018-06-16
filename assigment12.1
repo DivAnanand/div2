@@ -1,0 +1,121 @@
+#Q1.
+print("Q1")
+class Animal(object):
+    """
+    Generic Animal object
+    """
+    def animal__attribute(self):
+        """
+          this is used to define the method
+        """
+class Tiger(Animal):
+    """
+    Basic Tiger class
+    """
+    def __init__(self,breed):
+        self.breed=breed
+        "Display Inherenting methods"
+    def animal_attribute(self):
+        return "tiger are dangerous animals after lion"
+def main():
+    """
+    Display inheritance method
+    """
+    tig = Tiger("Sumatran Tiger")
+    print("Sumatran Tiger")
+    print("animal_attributes"+tig.animal_attribute())
+if __name__=="__main__":
+    main()
+    
+print("---------------------")
+#Q2.
+print("Q2")
+#Output A B
+        A B
+#Q3.
+print("Q3")
+class Cop(object):
+    """
+this class is used to inhert the features of Cop into Mission
+     """
+    def __init__self(self,name,age,work,experience,designation):
+        self.name=name
+        self.age=age
+        self.work =work
+        self.experience= experience
+        self.designation =designation
+    def add(self):
+        self.name = input("enter the name")
+        self.age = input("enter the age")
+        self.work = input("eneter the work")
+        self.experience = input("enter the experience")
+        self.designation = input("enter the designation")
+        """This is used to display the cop detalis
+        """
+    def display(self):
+        print("Name:",self.name)
+        print("Age :",self.age)
+        print("Work :",self.work)
+        print("Experience:",self.experience)
+        print("Designation:",self.designation)
+        """
+         this is used to update the cop details
+        """
+    def update(self):
+        self.Name = input("enter the name")
+        self.age = input("enter the age")
+        self.work = input("enter the Work")
+        self.experience = input("enter the experience")
+        self.desigantion = input("enter the desigantion")
+class Mission(self):
+    def add__mission__detalis(self):
+        print("CoP is readyy for mission\n")
+    C= Cop('name','age','work','experience','desgination')
+    C.add()
+    C.display()
+    C.update()
+    C.display()
+    
+        
+
+print("----------------------")
+#Q4
+print("Q4")
+import math
+class Shape(object):
+    """
+    Generic shape object
+    """
+    def area(self):
+       """
+       Area of shape
+       """
+class Square(Shape):
+    """
+    Basic square class
+    """
+    def __init__(self,length):
+           self.length=length
+    def area(self):
+        return self.length*self.length
+class Rectangle(Shape):
+    """
+    Basic rectangle class
+    """
+    def __init__(self,length,breadth):
+        self.length=length
+        self.breadth=breadth
+    def area(self):
+         return self.length*self.breadth
+def main():
+        "Display inheretence methods"
+        rect = Rectangle(5,4)
+        print("Rectangle(5,4)")
+        print("Area"+str(rect.area()))
+        
+        square = Square(5)
+        print("Square(5)")
+        print("Area"+str(square.area()))
+        
+if __name__ == "__main__":
+    main()
