@@ -1,0 +1,111 @@
+#Q1
+print("Q1")
+import threading
+import time
+"""
+In this question we are importing thread and time
+"""
+"""
+In this we are creating a def function called
+which is used to cal the square of the list
+"""
+#n is the number
+def cal_square(number):
+    print("cal square number")
+    for n in number:
+        time.sleep(5)
+        print("square",n*n)
+        
+def cal_cube(number):
+    print("calculate number")
+    for n in number:
+        time.sleep(5)
+        print("cube",n*n*n)
+list = [2,4,6,8]
+t = time.time()
+t1= threading.Thread(target=cal_square, args=(list,))
+t2= threading.Thread(target=cal_cube, args=(list,))
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+print("done in", time.time()-t)
+print("----------------------------") 
+#Q2.
+print("Q2")
+import threading
+import time
+"""
+In this question we are importing threa and time
+"""
+"""
+In this we are creating  as a lower and upper all
+"""
+"""
+Return true ' if n is a prime number. False otherwise."""
+lower = 1
+upper = 10
+print("Prime numbers between",lower,"and",upper,"are:")
+
+for num in range(lower,upper + 1):
+   # prime numbers are greater than 1
+   if num > 1:
+       time.sleep(1)
+       for i in range(2,num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
+print("----------------")
+#Q3.
+print("Q3")
+import threading
+import time
+"""
+In this we are iporting time and threading into the program
+"""
+"""
+In this we are creating a list and thread the list 
+"""
+class mythread(threading.Thread):
+    
+    def __init__(self):
+        threading.Thread. __init__(self)
+        
+    def __init__(self):
+        print("Thread starting ....")
+    threads = ['1','2','3','4']
+    i=1
+      for t in threads:
+        t = mythread()
+        t.run()
+        time.sleep(2)
+        print(2*i)
+        i = i+1
+        print("Thread Ending....")
+        print("-------------")
+#Q4.
+print("Q4")
+import threading
+import time
+"""
+In this question we are importing thread and time
+"""
+"""
+In which we are defining a factorial and taking input number
+"""
+def factorial(number):
+    product =1
+    for i in range(number):
+        product = product * (i+1)
+    return product
+user_input = int(input("enter the non negatuve integer to take the factorial"))
+factorial_of_user_input = factorial(user_input)
+print(factorial_of_user_input)
+t= time.time()
+t1= threading.Thread(target=factorial, args=(factorial_of_user_input,))
+t1.start()
+print("done in ", time.time()-t)
+
+      
+      
