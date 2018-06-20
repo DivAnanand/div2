@@ -1,0 +1,71 @@
+#Q1
+print("Q1")
+print("An access token is an object encapsulating the security"
+"identity of a process.")
+print("A toke is used to make security decisions and to store"
+"tamper- proof information about some system entity. While a token is"
+" generally used to represent only security information.")
+print("eyJhbGciOiJIUzI1NiIsInR5cCI6InNwb3RpZnkifQ")
+print("-----------------")
+#Q2
+print("Q2")
+print("Google IP Address")
+print("  172.217.161.14")
+print("Facebook Ip Address")
+print("157.240.23.35")
+print("--------------------")
+#Q3.
+print("Q3")
+import tweepy
+consumer_key = 'WbWkHQiefQe1sr7YvRqg8XUW8'
+consumer_secret = 'O4G2HxD1EbhOdVS1BpJBbckfS1HfpHDA2LodGyrcnKkR6xPhea'
+access_token = '1009352991038722048-w1dU7MXAYVPN5mk4qyqTlKwvZ1Npqv'
+access_token_secret = '	tr08Tr7mtjHUO8gn7wITEKSobs88fdOlamQnHeJTB3rys'
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+api = tweepy.API(auth)
+status="testing"
+api.update_status(status=status)
+# Open/Create a file to append data
+
+print("----------------")
+#Q4.
+print("Q4")
+print("Difference b/w Library and API")
+print("API is an interface for other programs to interact with you"
+      "or library without direct access")
+print("Library is a collection of function/ objects that servers one"
+      "particular purpose. You could use library in a variety of project")
+print("Example of Library are Tweey, numpy ,pandas, math and time")
+print("Example of API are HTML , jQuery, Python,PHP")
+print("--------------------------")
+#Q5.
+print("Q5")
+import pprint
+import sys
+import subprocess
+import spotipy
+import spotipy.util as util
+if len(sys.argv)>2:
+    username=sys.arvg[1]
+    playlist_name=sys.arvg[2]
+    playlist_description= sys.arvg[3]
+else:
+    print("Usage:%s username playlist-nameplaylist-description"%(sys.argv[0],)
+    sys.exit()
+    token=util.prompt_for_user_token(username)
+if token:
+          sp = spotipy.Spotify(auth=token)
+          sp.trace=False
+          playlists= sp.user_playlist_create(username,playlst_name,playlist_description)
+          pprint(playlists)
+else:
+          print("Can't get token for",username)
+        
+          
+    
+          
+
+
+      
+      
