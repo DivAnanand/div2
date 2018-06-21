@@ -1,0 +1,86 @@
+#Q1
+print("Q1")
+def this_falls():
+    a=3
+    if a<4: 
+       a=a/(a-3)
+    print(a)
+try:
+    this_falls()
+except ZeroDivisionError as err:
+    print("Handling run-time error:",err)
+print("ZeroDivisionError: division by zero") # it is ZeroDivision Error
+#Q2.
+print("Q2")
+l =[1,2,3]
+while True:
+    try:
+        print(l[3])
+    except(IndexError):
+        break
+print("list out of index of range")#it is errot that is raised
+#Q3.
+print("Q3")
+print(" raise NameError("Hi there")")  # Raise Error
+print("NameError: Hi there")
+print("---------------")
+#Q4
+print("Q4")
+"""
+def AbyB(a , b):
+	try:
+		c = ((a+b) / (a-b))
+	except ZeroDivisionError:
+		print ("a/b result in 0")
+	else:
+		print (c)
+
+# Driver program to test above function
+AbyB(2.0, 3.0)
+AbyB(3.0, 3.0)
+"""
+print("-5.0")
+print("a/b result in 0")
+print("----------------")
+#Q5.
+print("Q5")
+#Import
+try:
+    from toolkit.interface import interface
+except ImportError:
+    print("there is no library")
+#Value
+try:
+    x= int(input("enter the number"))
+    print(x)
+    break
+except ValueError:
+    print("Please enter a valid number")
+while True:
+    i=int(input("enter the number"))
+    l = [1,2,3]
+    print(l[i])
+    break
+except IndexError:
+    print("list index out of range")
+print("----------------")
+#Q6.
+print("Q6")
+class AgeTooSmallError(Exception):
+    pass
+def Age():
+    while True:
+        try: 
+           print("Student age")
+           value = int(input("enter your name")
+        except AgeTooSmallError:
+            raise AgeTooSmallError
+        if value < 18:
+            print("Sorry , you have to be above")
+            continue
+        else:
+            print("Accepted")
+            break
+    return value
+  Age()          
+
