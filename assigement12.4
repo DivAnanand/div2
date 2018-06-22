@@ -1,0 +1,71 @@
+#Q1.
+print("Q1")
+"""
+“Atticus said to Jem one day, “I’d rather you shot at tin cans in the backyard, but I know you’ll go after birds. 
+Shoot all the blue jays you want, if you can hit ‘em, but remember it’s a sin to kill a mockingbird.” 
+That was the only time I ever heard Atticus say it was a sin to do something, and I asked Miss Maudie about it. 
+“Your father’s right,” she said. “Mockingbirds don’t do one thing except make music for us to enjoy. 
+They don’t eat up people’s gardens, don’t nest in corn cribs, they don’t do one thing but sing their hearts out for us. 
+That’s why it’s a sin to kill a mockingbird.” – Harper Lee, To Kill a Mockingbird
+"""
+def read_last_lines(filename, no_of_lines=1):
+	file = open(filename,'r')
+	lines = file.readlines()
+	last_lines = lines[-no_of_lines:]
+	for line in last_lines:
+		print(line)
+	file.close()
+ 
+ 
+if __name__ == "__main__":
+	filename = "file.txt"
+	read_last_lines(filename,2)
+	print("-------------------")
+#Q2.
+print("Q2")
+"""
+What is Python language?                                                
+Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in 
+languages such as C++ or Java.                                         
+Python supports multiple programming paradigms, including object-oriented, imperative and functional programming or procedural styles.It features a dynamic ty
+"""
+from collections import Counter
+def word_count(fname):
+        with open(fname) as f:
+                return Counter(f.read().split())
+
+print("Number of words in the file :",word_count("file1.txt"))
+print("----------------------------")
+#Q3.
+print("Q3")
+"""
+Hello world 
+"""
+#first.txt
+"""
+Hello Wrold
+"""
+#out.txt
+with open("first.txt") as f:
+    with open("out.txt", "w") as f1:
+        for line in f:
+            f1.write(line)
+            print("-----------")
+#Q4.
+print("Q4.")
+with open('file.txt') as fh1, open('file1.txt') as fh2:
+    for line1, line2 in zip(fh1, fh2):
+         print(line1+line2)
+         print("-------------------")
+#Q5.
+print("Q5")
+filename="test.txt"
+filename1="out.txt"
+import random
+with open(filename,'w') as f:
+    with open(filename1,'w') as f1:
+        for x in range(10):
+            f.write(str(random.random())+"<-- See This \n")
+            sorted(filename1)
+            f1.write(str(random.random())+"<-- See this \n")
+        
