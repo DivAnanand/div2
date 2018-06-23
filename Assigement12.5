@@ -1,0 +1,27 @@
+#Q1
+print("Q1")
+import re
+email="zuck26@facebook.com""page33@google.com""jeff42@amazon.com"
+desired_output=" ".join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)"," ",email).split())
+print(re.findall(desired_output,email,flags=re.IGNORECASE))
+print("-------------")
+#Q2
+print("Q2")
+import re
+text="Betty bought a bit of butter, But the butter was so bitter, So she bought some better butter, To make the bitter butter better."
+print(re.findall(r'\\bB\w+',text,flags=re.IGNORECASE))
+print("------------")
+#Q3
+print("Q3")
+import re
+sentence= "A, very very; irregular_sentence"
+output =" ".join(re.split('[; ,\s_]+',sentence))
+print(output)
+print("--------------")
+#Q4.
+print("Q4")
+import re
+tweet =  '''Good advice! RT @TheNextWeb: What I would do differently if I was learning to code today http://t.co/lbwej0pxOd cc: @garybernhardt #rstats'''
+desired_output=' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|(RT|cc)|(r|stats)"," ",tweet).split())
+print(desired_output)
+
