@@ -1,0 +1,54 @@
+#Q1.
+print("Q1")
+from tkinter as *
+r =Tk()
+r.title("Hello World")
+exitbutton= Button(r, text='Stop', width=150, command = r.destroy).pack()
+r.mainloop()
+print("---------------")
+#Q2
+print("Q2")
+import sys
+from tkinter import *
+def mhello():
+    mLabel=Label(r,text="Hello World").pack()
+r= Tk()
+r.geometry("450x450+500+500")
+r.title("Hello World")
+mLabel=Label(r,text="MyLabel").pack()
+exitButton = Button(r,text="Ok", width= 50, command=mhello).pack()
+r.mainloop()
+print("------------------")
+#Q3.
+print("Q3")
+import sys
+from tkinter import *
+def mhello():
+    mLabel=Label(root,text="Hello World").pack()
+root =Tk()
+root.geometry=("450x450+500+500")
+topFrame=Frame(root)
+topFrame.pack()
+bottomFrame=Frame(root)
+bottomFrame.pack(side=BOTTOM)
+mLabel=Label(root,text="MyLabel").pack()
+button1 = Button(topFrame,text="Click me",fg="Black",bg="white",command=mhello).pack()
+button2 = Button(bottomFrame,text="ok",fg="red",bg="blue", command=root.destroy).pack()
+root.mainloop()
+print("------------------")
+#Q4.
+print("Q4")
+from tkinter import *
+import tkinter.simpledialog
+import tkinter.messagebox
+root= Tk()
+w=Label(root,text="My program")
+w.pack()
+tkinter.messagebox.showinfo("Welcome", "Add  your welcome message here")
+name=tkinter.simpledialog.askstring("Name","what is your name")
+age=tkinter.simpledialog.askinteger("Age", "what is you age")
+output=("Hello ,%s. I hope you are doing fine today")%(name)
+output +=("Outrecords indicate that you are %d years old")%(age)
+
+tkinter.messagebox.showinfo("Results",output)
+root.mainloop()
