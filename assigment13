@@ -1,0 +1,42 @@
+#Q1
+print("Q1")
+from tkinter import *
+root =Tk()
+root.title("MY GUI")
+names={}
+names["Div"]="93389898"
+names["Raghav"]="9878798989"
+names["Nitin"]="32323232"
+names["Ravinder"]="3323233"
+scrollbar=Scrollbar(root)
+scrollbar.pack(side =RIGHT,fill =Y)
+mylist = Listbox(root, yscrollcommand=scrollbar.set)
+for mobile in names:
+    mylist.insert(END,mobile)
+mylist.pack(side =LEFT, fill=BOTH)
+scrollbar.config(command=mylist.yview)
+mainloop()
+print("--------------")
+#Q2
+print("Q2")
+from tkinter import *
+root=Tk()
+root.title("MyGUI")
+def add():
+    mylist.config(ment.get())
+ment=StringVar()
+names={}
+names["Div"]="93389898"
+names["Raghav"]="9878798989"
+names["Nitin"]="32323232"
+names["Ravinder"]="3323233"
+scrollbar=Scrollbar(root)
+scrollbar.pack(side =RIGHT,fill =Y)
+button=Button (root,text="Add",command=add,bg='black',fg='white').pack()
+entry=Entry(root,textvariable=ment).pack()
+mylist = Listbox(root, yscrollcommand=scrollbar.set)
+for mobile in names:
+    mylist.insert(END,mobile)
+mylist.pack(side =LEFT, fill=BOTH)
+scrollbar.config(command=mylist.yview)
+root.mainloop()
