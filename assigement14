@@ -1,0 +1,40 @@
+#Create a numpy array with 10 elements of the shape(10,1) using np.random and find out the mean of the elements using basic numpy functions.
+print("Q1")
+import numpy as np
+print(np.random.rand(10,1))
+print(np.mean(np.random.rand(10,1)))
+print("------------------")
+# Create a numpy array with 20 elements of the shape(20,1) using np.random find the variance and standard deviation of the elements.
+print("Q2")
+import numpy as np
+print(np.random.rand(20,1))
+print(np.var(np.random.rand(20,1)))
+print(np.std(np.random.rand(20,1)))
+print("--------------")
+#Create a numpy array A of shape(10,20) and B of shape (20,25) using np.random. Print the matrix which is the matrix multiplication of A and B. The shape of the new matrix should be (10,25). Using basic numpy math functions only find the sum of all the elements of the new matrix.
+print("Q3")
+import numpy as np
+x= np.random.rand(10,20)
+y= np.random.rand(20,25)
+print(x)
+print(y)
+m=np.dot(c,d)
+print("Matrix Multiplication of c and d :\n",m)
+print("\n sum of elements in multiplication array is:",np.sum(m)
+print("------------")
+#Create a numpy array A of shape(10,1).Using the basic operations of the numpy array generate an array of shape(10,1) such that each element is the following function applied on each element of A.
+#Apply this function to each element of A and print the new array holding the value the function returns
+print("Q4")
+import numpy as np
+A= np.arrange(1,11).reshape(10,1)
+def fun(x):
+      return 1/(1+np.exp(-x))
+fun = np.vectorsize(fun)
+new_array = fun(A)
+print("after applying function to A:\n",new_array)
+
+
+
+
+
+
