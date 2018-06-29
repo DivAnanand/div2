@@ -15,6 +15,7 @@ def btnEqualsInput():
     operator_1  = " "
 cal =Tk()
 cal.title("Calculator")
+cal.geometry("500X500")
 operator_1 = " "
 text_Input=StringVar()
 
