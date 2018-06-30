@@ -1,0 +1,36 @@
+#Q1.
+import mysql.connector
+
+con=msql.connector.connect(user='root',password='xxxxx',host='localhost'
+                          port='3306',database='div')
+
+
+x= mysql.connector.connect(host, username, password)
+x.selectt_db("Div")
+cursor = x.cursor()
+
+table1 = ''' CREATE TABLE author(author_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name VARCHAR(50) NOT NULL,last_name VARCHAR(50) NOT NULL)'''
+cursor.execute(table1)
+table2 = '''CREATE TABLE zipcodes(zip_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, city VARCHAR(50) NOT NULL, zip_code(50) NOT NULL)'''
+cursor.execute(table2)
+table3 = '''CREATE TABLE publishers(pub_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50) NOT NULL, street_add VARCHAR(50) NOT NULL, FOREIGN KEY(zip_id) REFERENCES zipcode(zip_code))'''
+cursor.execute(table3)
+table4 = '''CREATE TABLE titles(title_id INT NOT NULL AUTO INCREMENT PRIMARY KEY, title VARCHAR(50) NOT NULL, isbn INT(50) NOT NULL, publisher_id INT(50) NOT NULL,pub_year INT(50) NOT NULL, FOREGIN KEY(publisher_id) REFERENCES publishers(pub_id)'''
+cursor.execute(table4)
+table5 = '''CREATE TABLE book(book_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, title_id INT(50) NOT NULL, location VARCHAR(50) NOT NULL, genre VARCHAR(50) NOT NULL, FOREIGN KEY(title_id) REFERENCES titles(title_id) REFERENCES title(title_id))'''
+cursor.execute(table5)
+table6 = '''CREATE TABLE authorttles(author_title_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, author_id INT(50) NOT NULL, title_id INT(50) NOT NULL, FOREIGN KEY(author_id) REFERENCES authors(author_id), FOREIGN KEY(title_id) REFERENCES titles(title_id))'''
+cursor.execute(table6)
+
+#Q2
+"""
+UPDATING THE VALUES IN THE TABLE
+"""
+
+update_req = """UPDATE titles SET isbn ="4566" where title = 'a brief history of time"""
+print('before the updation since we didnt commit')
+print(cursor.fetchall())
+x.commit()
+print('updated row')
+print(cursor.fetchall())
+
