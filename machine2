@@ -1,0 +1,25 @@
+#Q1
+import numpy as np
+x=np.random.rand(10,1)
+y=np.mean(x)
+print(y)
+#Q2.
+import numpy as np
+x=np.random.rand(20,1)
+y=np.var(y)
+z=np.std(x)
+print(y)
+#Q3
+import numpy as np
+x=np.random.rand(10,20)
+y=np.random.rand(20,25)
+z=np.matmul(x,y)
+w=np.sum(z)
+print(z)
+print(w)
+#Q4
+import numpy as np
+x=np.random.rand(10,1)
+y=1/(1+np.exp(x))
+print(y)
+
