@@ -1,1 +1,31 @@
 #Q1
+import pandas as pd 
+d={'name':pd.Series(["Div","Nitin","Ravinder")],
+'age':pd.Series([23,4,5)],
+'mail':pd.Series(["jhdsjd@gmail.com","nitn334@gmail.com","ravinder232@gmail.com")],
+'phoneno':pd.Series([2323232,323424332,432342323])}
+df=pd.DataFrame(d,index[1,2,3])
+print(df)
+print(df.axes)
+print(df.dtypes)
+print(df.shape)
+print(df.values)
+#Q2
+df= pd.read_csv('question2-20.csv')
+print(df.head(5))
+print(df.head(10))
+print("mean",df.mean)
+print(df.tail(10))
+print("LOCATION")
+print(df['Location'])
+print(df['Location']).describe)
+
+print("MINTEMP")
+print(df['Mintemp'].describe())
+print("Count",df["Mintemp"].count())
+print("Min",df["Mintemp"].min())
+print("Var",df["Mintemp"].var())
+print("Max",df["Mintemp"].max())
+print("Mean",df["Mintemp"].mean())
+print("Median",df["Mintemp"].median())
+print("Mode",df["Mintemp"].mode())
