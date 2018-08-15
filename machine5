@@ -1,0 +1,13 @@
+#Q1
+data=pan.read_csv('assig5.csv")
+print(data.isnull().summ())
+#b
+data=data.dropna()
+print(data.isnull().sum())
+#c
+data1=pan.read_csv('assig5.csv')
+print(data1.fillna(data1.mean()))
+#d
+print(data1.dtype)
+data2=pan.Series(data1=data.MaxTemp)
+print(data2)
