@@ -1,1 +1,26 @@
-
+Q1
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt 
+import pandas as pd
+df=pd.read_csv("\C:\User\divanand\Desktop\titanic.csv")
+print("\On April 15,1912 the largest passenger liner ever made collided with an iceberg during her maiden voyage. When the Titanic sank it killed 1502 out odf 2224 passengers and crew")
+print("\\nThe titanic.csv dataset contains data of 887 of the real Titanic passengers")
+print("Each row represnts one person.The columns describe different about the person including whether they survived, their age , their passenger-class,their sex and the fare they paid)
+Q2
+print("Total Null values ")
+print(sum(df.apply(lambda x: sum(xisnull().values),axis=1)))
+print("The null value is handled by isnull() function. Conssequently,  we have no null value in this dataset")
+Q3
+data=df[\"Fare\"]
+sns.boxplot(data)
+print("The outliers are clearly visible with the help of Boxplot\\n\\n\")
+Q4
+print(pd.crosstab(df["Sex"],df["Survied"],margins="True"))
+sns.countplot(x="Sex",hue="Survied",data=df)
+print(\"\\t\\t::FINDING::\")
+print("The number of women survived was more than that of men")
+Q5
+sns.pairplot(df)
+Q6
+print("The Graphs chosen are :\\n The Bivarite graph between Sex & Survived: It is one of those graphs which depicts the true scene of how many people survived or died on the basis of gender \\n\\ The Universe Graph of Age: Given an overview of how young were people onboard as most of them were betwwen 20-38 years The Univeriate Graph of Fare:It gives a review of what part of passengers were economically rich or middle class")
