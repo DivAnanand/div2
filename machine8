@@ -1,1 +1,5 @@
 
+import pandas as pd
+import numpy as np
+df = pd.read_csv('C:\divanand\Desktop\ML_projects\kc_house_data.csv')
+df.head()
