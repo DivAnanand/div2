@@ -1,0 +1,38 @@
+Q1
+import pandas as pd  
+import numpy as np  
+import matplotlib.pyplot as plt  
+from sklearn import datasets
+from sklearn.model_selection import train_test_split 
+from sklearn.svm import SVC
+from sklearn.metrics import confusion_matrix, classification_report
+data = datasets.load_digits()
+Q2
+X = data.data
+y = data.target
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20, random_state=42)
+Q3
+svclassifier = SVC(kernel='linear', degree=8)  
+svclassifier.fit(X_train, y_train) 
+y_pred1 = svclassifier.predict(X_test)
+print("kernel = linear\n")
+print("Confusion Matrix:\n",confusion_matrix(y_test, y_pred1))
+print("\n\nClassification Report:\n", classification_report(y_test, y_pred1))
+svclassifier = SVC(kernel='poly', degree=8)  
+svclassifier.fit(X_train, y_train) 
+y_pred2 = svclassifier.predict(X_test)
+print("kernel = poly\n")
+print("Confusion Matrix:\n",confusion_matrix(y_test, y_pred2))
+print("\n\nClassification Report:\n", classification_report(y_test, y_pred2))
+svclassifier = SVC(kernel='rbf', degree=8)  
+svclassifier.fit(X_train, y_train) 
+y_pred3 = svclassifier.predict(X_test)
+print("kernel =rbf\n")
+print("Confusion Matrix:\n",confusion_matrix(y_test, y_pred3))
+print("\n\nClassification Report:\n", classification_report(y_test, y_pred3))
+svclassifier = SVC(kernel='sigmoid', degree=8)  
+svclassifier.fit(X_train, y_train) 
+y_pred4 = svclassifier.predict(X_test)
+print("kernel = 'sigmoid'\n")
+print("Confusion Matrix:\n",confusion_matrix(y_test, y_pred4))
+print("\n\nClassification Report:\n", classification_report(y_test, y_pred4))
