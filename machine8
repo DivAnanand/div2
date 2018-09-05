@@ -1,5 +1,49 @@
+Q1
 
+#importing libraries#import 
 import pandas as pd
 import numpy as np
-df = pd.read_csv('C:\divanand\Desktop\ML_projects\kc_house_data.csv')
-df.head()
+import matplotlib.pyplot as plt
+#importing mnist dataset from sklearn
+from sklearn.datasets import load_digits 
+digit = load_digits()
+print(digit.data)
+# data is stored in x whereas target is in y variable
+x = digit.data
+print(x)
+y = digit.target
+print(y)
+Q2
+#feature scaling using StandardScaler
+from sklearn.preprocessing import StandardScaler
+x_std = StandardScaler().fit_transform(x) 
+x_std
+Q3
+#spliting data into training and testing set
+from sklearn.model_selection import train_test_split
+x_train , x_test , y_train, y_test = train_test_split(x_std , y ,test_size = 0.4, random_state = 20)
+Q4
+from sklearn.decomposition import PCA
+pca = PCA(n_components = 0.96 )
+
+#fiting the training part in 
+x_train = pca.fit_transform(x_train)
+
+x_test = pca.transform(x_test)
+Q5
+
+#Classification usng logistic regression model#Classif 
+from sklearn.linear_model import LogisticRegression
+log = LogisticRegression()
+
+#fiting the training part into model
+log.fit(x_train , y_train)
+#prediction over model
+prediction = log.predict(x_test)
+Q6
+#accuracy score
+from sklearn.metrics import accuracy_score
+accuracy_score(y_test , prediction)
+# Classification report
+from sklearn.metrics import classification_report
+classification_report(y_test , prediction,labels = None, digits = 3)
