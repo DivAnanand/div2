@@ -1,1 +1,55 @@
+Q1
+#importing libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
+url = 'http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html'
+data = pd.read_html(url)
+
+print(data)
+#importing dataset
+from sklearn.datasets import load_digits
+
+digit = load_digits()
+digit.data.shape
+Q2
+#label datashape
+digit.target.shape
+
+#look of image in digit dataset
+plt.figure(figsize = (10,4))
+for index, (image,label) in enumerate(zip(digit.data[0:3], digit.target[0:3])):
+  plt.subplot(1, 3, index+1)
+  plt.imshow(np.reshape(image ,(8,8)), cmap=plt.cm.gray)
+  plt.title('Training %i\n'%label,fontsize = 10)
+ Q3
+ from sklearn.model_selection import train_test_split
+
+x_train, x_test, y_train , y_test = train_test_split(digit.data , digit.target, test_size=0.30 , random_state=20)
+
+#importing logistic Regression model
+from sklearn.linear_model import LogisticRegression
+
+#initialise it to a variable
+l_reg = LogisticRegression()
+
+#now training of model on given dataset
+l_reg.fit(x_train, y_train)
+
+#prediction part #predic 
+prediction = l_reg.predict(x_test)
+Q4
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors = 5)
+
+knn.fit(x_train , y_train)
+
+#prediction part
+pred = knn.predict(x_test)
+Q5
+#knn score
+from sklearn.metrics import accuracy_score
+score = accuracy_score(y_test , pred)
+
+print(score)
