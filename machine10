@@ -1,0 +1,62 @@
+Q1
+
+#importing libraires#import 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_wine 
+from sklearn.metrics import accuracy_score
+#Storing data and target values in variables x and y respectively
+data = load_wine()
+print(data)
+
+# target in y
+y = data.target
+#print(data.target)
+
+#data in x
+x =data.data
+#print(data.data)
+Q2
+
+# spliting data into training and testing# split 
+from sklearn.model_selection import train_test_split
+
+x_train , x_test , y_train , y_test = train_test_split(x ,y ,test_size = 0.4 , random_state=40)
+
+from sklearn.tree import DecisionTreeClassifier
+dt = DecisionTreeClassifier()
+dt=dt.fit(x_train , y_train)
+print(dt)
+
+#score of Decision tree Classifier#score o 
+print(dt.score(x_test , y_test))
+# bagging using decision tree
+from sklearn.ensemble import BaggingClassifier
+bg = BaggingClassifier(DecisionTreeClassifier() ,n_estimators = 20)
+print(bg)
+#fitting using bagging
+bg.fit(x_train , y_train)
+
+#score using bagging Decision tree#score u 
+bg.score(x_test ,y_test)
+ #Stochastic Gradient boosting Classification
+from sklearn.ensemble import GradientBoostingClassifier
+
+g_b = GradientBoostingClassifier( n_estimators =10)
+g_b.fit(x_train, y_train)
+
+# Score of Gradient Boosting Classification# Score  
+g_b.score(x_test , y_test)
+
+# Voting Ensemble# Votin 
+from sklearn.ensemble import VotingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+lr = LogisticRegression()
+svm = SVC()
+dt = DecisionTreeClassifier()
+
+vcvc  ==  VotingClassifierVotingCl (estimators = [('lr',lr), ('svm' ,svm), ('dt',dt)], voting = 'hard')
+
+vc.fit(x_train ,y_train)
