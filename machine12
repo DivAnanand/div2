@@ -1,14 +1,6 @@
 Q1
 p(yes/sunny)=p(sunny/yes)*p(yes)/p(sunny)
-
-
-
-
-
-
-
-
-
+answer(3/5)
 Q2
 import pandas as pd
 import matplotlib.pyplot as plt
