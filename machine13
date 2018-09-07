@@ -1,1 +1,68 @@
+Q1
+import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline
+df=pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/balance-scale/balance-scale.data',names=['Class Name', 'Left-Weight', 'Left-Distance', 'Right-Weight', 'Right-Distance'])
 
+df.head()
+
+df.shape
+:
+df.size
+Q2
+df.describe(include='all')
+df.info()
+y=df['Class Name']
+x=df.drop(['Class Name'],axis=1)
+Q3
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.40, random_state=50)
+Q4
+from sklearn.tree import DecisionTreeClassifier
+gdc=DecisionTreeClassifier(criterion='gini')
+gdc.fit(x_train, y_train)
+pred=gdc.predict(x_test)
+from sklearn.metrics import accuracy_score, classification_report
+accuracy_score(y_test, pred)
+classification_report(y_test, pred)
+#Entropy
+edt=DecisionTreeClassifier(criterion='entropy')
+
+edt.fit(x_train, y_train)
+pred=edt.predict(x_test)
+accuracy_score(y_test, pred)
+
+classification_report(y_test, pred)
+Q5
+#Random Forest 
+from sklearn.ensemble import RandomForestClassifier
+
+gf = RandomForestClassifier(criterion='gini')
+gf.fit(x_train, y_train)
+pred=gf.predict(x_test)
+accuracy_score(y_test,pred)
+classification_report(y_test, pred)
+#Entropy Forest 
+ef=RandomForestClassifier(criterion='entropy')
+
+ef.fit(x_train, y_train)
+
+pred = ef.predict(x_test)
+
+print(accuracy_score(y_test, pred))
+print(classification_report(y_test, pred))
+#Extra Tree Classifire 
+from sklearn.ensemble import ExtraTreesClassifier
+ge = ExtraTreesClassifier(criterion='gini')
+print(ge.fit(x_train, y_train))
+pred = ge.predict(x_test)
+print(accuracy_score(y_test, pred))
+print(classification_report(y_test, pred))
+ee= ExtraTreesClassifier(criterion='entropy')
+print(ee.fit(x_train, y_train))
+
+pred = ee.predict(x_test)
+print(accuracy_score(y_test, pred))
+print(classification_report(y_test, pred))
