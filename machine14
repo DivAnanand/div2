@@ -1,1 +1,28 @@
+Q1
+(b+c)*(a-1)
+Q2
 
+weight_1 =  2.7
+weight_2 =  -8.6
+weight_3 =  0.002
+b1 = -0.06
+b2 = -2.5
+b3 = 1.4
+x = (weight_1 * b1) + (weight_2 * b2) + (weight_3 * b3)
+print(x)
+import math
+e = math.exp(-x)
+
+print(e)
+f = 1/(1+e)
+print(f)
+bias = -1.1
+x_b = (weight_1 * b1) + (weight_2 * b2) + (weight_3 * b3) + bias
+print(x_b)
+import math
+ex = math.exp(-x_b)
+f_bx = 1/(1+ex)
+
+print(f_bx)
+diff = f - f_bx
+print(diff)
