@@ -1,0 +1,36 @@
+Q1
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_sample_image
+from sklearn.datasets import load_digits
+from sklearn.cluster import KMeans
+from sklearn.metrics import confusion_matrix, accuracy_score
+from scipy.stats import mode
+digits = load_digits()
+X = digits.data
+y = digits.target
+Q2
+k_means = KMeans(n_clusters=10)
+predict = k_means.fit_predict(X)
+Q3
+labels = np.zeros_like(predict)
+for i in range(10):
+    mask = (predict==i)
+    labels[mask] = mode(y[mask])[0]
+    Q4
+    print("Accuracy Score: ", accuracy_score(y,labels))
+print("\nConfusion Matrix: \n", confusion_matrix(y, labels))
+Q5
+from sklearn.datasets import load_sample_image
+img=load_sample_image('china.jpg')
+type(img)
+Q6
+img.shape
+Q7
+l,h,d=img.shape
+img_arr=np.reshape(img,(l*h,d))
+model = KMeans(n_clusters=7)
+fimg = model.fit(img_arr)
+labels = model.predict(img_arr)
+a=np.reshape(labels,(427,640))
+plt.imshow(a)
